@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-10-23T19:40:05.489Z",
+  "url": "http://127.0.0.1:4173",
+  "node": "v22.22.2",
+  "lighthouse": "13.5.0",
+  "platform": "darwin arm64",
+  "runs": 3,
+  "summary": [
+    {
+      "page": "home",
+      "profile": "mobile",
+      "scores": {
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3332.8832,
+      "cls": 0,
+      "tbt": 12
+    },
+    {
+      "page": "detail",
+      "profile": "mobile",
+      "scores": {
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3296.9208,
+      "cls": 0.07894027537566542,
+      "tbt": 0
+    },
+    {
+      "page": "detail-kurio",
+      "profile": "mobile",
+      "scores": {
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3382.3276,
+      "cls": 0,
+      "tbt": 0
+    },
+    {
+      "page": "home",
+      "profile": "desktop",
+      "scores": {
+        "performance": 99,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 847.7560000000002,
+      "cls": 0.0001412037037037037,
+      "tbt": 0
+    },
+    {
+      "page": "detail",
+      "profile": "desktop",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 808.1180000000002,
+      "cls": 0.00961574074074074,
+      "tbt": 0
+    },
+    {
+      "page": "detail-kurio",
+      "profile": "desktop",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 842.7952000000002,
+      "cls": 0,
+      "tbt": 0
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+@import '../design/tokens.css';
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('./assets/fonts/roboto-mono-latin-wght.woff2') format('woff2');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease,
+    opacity 220ms ease;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn-fill:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-ink);
+}
+
+.btn-fill:active,
+.btn-icon:active,
+.btn-float:active {
+  transform: scale(0.97);
+}
+
+.btn-quiet:hover {
+  color: var(--color-text-accent);
+}
+
+.btn-line:hover {
+  color: var(--color-text-primary);
+}
+
+.btn-icon:hover,
+.btn-social:hover {
+  background-color: var(--color-surface-dark);
+}
+
+.btn-float:hover {
+  background-color: var(--color-primary);
+  color: var(--color-ink);
+}
+
+.btn-dot:hover {
+  transform: scale(1.35);
+}
+
+.btn-dot:active {
+  transform: scale(0.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn-fill:active,
+  .btn-icon:active,
+  .btn-float:active,
+  .btn-dot:hover,
+  .btn-dot:active {
+    transition: none;
+    transform: none;
+  }
+}
+
+@utility sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.dual-range {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 16px;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+}
+
+.dual-range::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 14px;
+  height: 14px;
+  appearance: none;
+  border-radius: 999px;
+  background: var(--color-primary);
+  cursor: pointer;
+}
+
+.dual-range::-moz-range-thumb {
+  pointer-events: auto;
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-primary);
+  cursor: pointer;
+}
+
+@utility container-kurio {
+  width: min(var(--container-max), calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .container-kurio {
+    width: min(var(--container-max), calc(100% - 4rem));
+  }
+}
+
+.shimmer {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-surface-card) 0%,
+    var(--color-surface-raised) 50%,
+    var(--color-surface-card) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shimmer {
+    animation: none;
+  }
+}

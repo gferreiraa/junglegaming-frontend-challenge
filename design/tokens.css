@@ -1,0 +1,83 @@
+/* =========================================================
+   KURIO — Design Tokens (extraídos do Figma "Frontend Challenge")
+   Valores marcados com (≈) foram estimados visualmente; os demais
+   vêm direto das variáveis/estilos do Figma.
+   Uso: Tailwind v4 lê o bloco @theme; qualquer stack pode usar as vars.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
+
+@theme {
+  /* ---------- Cores (Figma variables) ---------- */
+  --color-ink: #140d0a;              /* color/ink — fundo da página */
+  --color-surface-card: #241612;     /* color/surface-card — cards, sidebar, painéis */
+  --color-surface-dark: #38220f;     /* color/surface-dark — faixa do footer */
+  --color-surface-raised: #2f1d15;   /* color/surface-raised — hover de card / avatar placeholder (confirmado via Figma API) */
+  --color-overlay: rgb(20 13 10 / 0.72); /* (≈) backdrop de modais */
+
+  --color-primary: #d28a4c;          /* color/primary — botões, underline de tab, badges */
+  --color-primary-hover: #e09a5c;    /* (≈) */
+  --color-primary-foreground: #140d0a; /* texto sobre primary (= ink) */
+
+  --color-text-primary: #f5f1eb;     /* color/text-primary · color/foreground */
+  --color-text-secondary: #cfb28c;   /* color/text-secondary — parágrafos, contadores */
+  --color-text-accent: #e89b55;      /* color/text-accent — nav ativa, links, preços */
+  --color-text-muted: #b39463;       /* color/secondary — placeholders, legendas */
+
+  --color-border: #3f2319;           /* color/border — bordas de input, divisores (confirmado via Figma API) */
+  --color-border-strong: #5a3f2c;    /* (≈) borda de botão outline / radio */
+  --color-danger: #e5674d;           /* (≈) texto de alerta/erro de formulário */
+  --color-text-coral: #f0805f;       /* text/coral — asterisco "*" de campo obrigatório (Perfil/Carteiras, confirmado via Figma API) */
+
+  /* ---------- Tipografia ---------- */
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: var(--font-mono);     /* o projeto inteiro usa Roboto Mono */
+
+  /* Escala (nome Figma → token) */
+  --text-display: 43px;  --text-display--line-height: 70px;   /* Display/43 Bold */
+  --text-h2: 28px;       --text-h2--line-height: 1;           /* "Diário da Cunhagem" */
+  --text-h3: 20px;       --text-h3--line-height: 28px;        /* (≈) título NFT detalhe */
+  --text-body-lg: 16px;  --text-body-lg--line-height: 20px;   /* Body Large/16 Bold */
+  --text-list: 15px;     --text-list--line-height: 40px;      /* Body/15 · lh 40 (filtros) */
+  --text-body: 14px;     --text-body--line-height: 24px;      /* Body/14 Regular · lh 24 */
+  --text-input: 14px;    --text-input--line-height: 16px;     /* Body/14 · lh 16 */
+  --text-caption: 12px;  --text-caption--line-height: 16px;   /* (≈) metadados, footer */
+  --text-micro: 10px;    --text-micro--line-height: 12px;     /* (≈) badges, chips */
+
+  /* ---------- Raios ---------- */
+  --radius-sm: 6px;      /* botões, inputs */
+  --radius-md: 10px;     /* (≈) cards de lista / mobile cards */
+  --radius-lg: 15px;     /* imagens de NFT */
+  --radius-xl: 24px;     /* (≈) banner mobile, bottom sheet */
+  --radius-device: 40px; /* moldura mobile */
+  --radius-full: 9999px; /* pills mobile, botões qty */
+
+  /* ---------- Espaçamento / layout ---------- */
+  --spacing: 4px;                    /* base Tailwind v4 */
+  --container-max: 1200px;           /* 1440 - 2×120 */
+  --page-gutter-desktop: 120px;
+  --page-gutter-mobile: 24px;
+  --section-gap: 96px;               /* gap vertical entre seções (desktop) */
+  --sidebar-width: 270px;            /* filtros / menu do perfil */
+  --header-height: 64px;             /* (≈) */
+  --tabbar-height: 72px;             /* (≈) bottom nav mobile */
+
+  /* ---------- Breakpoints ---------- */
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+
+  /* ---------- Sombras ---------- */
+  --shadow-modal: 0 24px 64px rgb(0 0 0 / 0.55);  /* (≈) */
+  --shadow-fab: 0 8px 24px rgb(210 138 76 / 0.35); /* (≈) botão central mobile */
+}
+
+/* Base */
+html, body {
+  background: var(--color-ink);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+::placeholder { color: var(--color-text-muted); }
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
